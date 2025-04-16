@@ -1,9 +1,5 @@
-import collections
 import sys
-import heapq  # For the priority queue
-
-# Increase recursion depth (might not be needed for iterative searches)
-# sys.setrecursionlimit(2000)
+import heapq
 
 
 def parse_input():
@@ -96,6 +92,8 @@ def compute_future_max(n, grid):
     ignoring thief-related effects (treating thief cells as 0).
     Allowed moves: Down and Right.
     """
+
+    # Initialize a 2D array to store the maximum coins reachable from each cell to the destination.
     dp = [[-float("inf")] * n for _ in range(n)]
     for r in range(n - 1, -1, -1):
         for c in range(n - 1, -1, -1):
@@ -116,8 +114,7 @@ def compute_future_max(n, grid):
 # --- Objective 2 Implementation with Informed Search (A*) ---
 def solve_objective2_informed(n, grid):
     """
-    Finds the path that maximizes the final coin count using an informed A* search,
-    based on the provided project phase "بیشترین سود ممکن".
+    Finds the path that maximizes the final coin count using an informed A* search
     """
     print("--- Objective 2: Maximize Final Coins (Informed A* Search) ---")
     future_max = compute_future_max(n, grid)

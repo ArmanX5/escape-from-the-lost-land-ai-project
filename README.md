@@ -2,6 +2,10 @@
 
 An artificial intelligence project implementing pathfinding algorithms to solve a grid-based escape scenario with multiple objectives.
 
+## Contributors
+
+**Arman Akhoundy** ([ArmanX5](https://github.com/ArmanX5)) & **Amirreza Abbasian** ([Amirreza0924](https://github.com/Amirreza0924))
+
 ## Project Overview
 
 The project implements three different pathfinding approaches in a game where a character named Arian must navigate through a grid containing treasures and thieves. Each phase tackles a different objective:
